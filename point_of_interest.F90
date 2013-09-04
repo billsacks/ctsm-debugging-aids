@@ -9,6 +9,7 @@
 
 module point_of_interest
 
+  use clmtype
   use shr_kind_mod  , only : r8 => shr_kind_r8
   
   implicit none
@@ -21,8 +22,6 @@ module point_of_interest
 contains
   
   logical function poi_c(c)
-    use clmtype
-
     integer, intent(in) :: c
 
     integer :: g, l
