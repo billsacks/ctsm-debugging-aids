@@ -1,7 +1,8 @@
 ! This module contains logical functions to find point(s) of interest in CLM.
+! Note the abbreviation: p.o.i = point of interest
 
 ! Its typical use will be something like:
-!    if (poi(c)) then
+!    if (poi_c(c)) then
 !       write(iulog,*) ...
 
 ! Look for comments about "customize" to see what to customize.
@@ -14,13 +15,8 @@ module point_of_interest
   save
   private
 
-  public :: poi
-
-  ! p.o.i = point of interest
-  ! Customize the routines defined in this interface
-  interface poi             
-     module procedure poi_c
-  end interface poi
+  ! Customize: can define other levels like poi_p, etc.
+  public :: poi_c
 
 contains
   
