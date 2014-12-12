@@ -9,7 +9,9 @@
 
 module point_of_interest
 
-  use clmtype
+  use GridcellType, only : grc
+  use LandunitType, only : lun
+  use ColumnType, only : col
   use shr_kind_mod  , only : r8 => shr_kind_r8
   
   implicit none
